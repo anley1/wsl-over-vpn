@@ -2,7 +2,7 @@
 # [network]
 # generateHosts = false
 127.0.0.1	localhost
-127.0.1.1	XXXXXX.wg.dir.telstra.com	XXXXXX
+127.0.1.1	XXXXXX.com	XXXXXX
 ﻿
 192.168.20.5	host.docker.internal
 192.168.20.5	gateway.docker.internal
