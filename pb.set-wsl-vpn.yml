@@ -1,0 +1,14 @@
+---
+# Set your corporate VPN across your WSL environment.
+# ---------------------------------------------------
+- name: wsl over vpn
+  hosts: target
+  gather_facts: false
+  become: true
+  roles:
+    - wsl-hosts
+    - wsl-environment
+    - wsl-resolv
+    - wsl-conf
+    - wsl-cntlm
+    - wsl-motd

@@ -1,0 +1,22 @@
+---
+
+- name: copy over resolv.conf
+  become: true
+  template:
+    src: resolv.conf.j2
+    dest: /etc/resolv.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: true
+  tags:
+    - wsl-dns
+
+- name: Ensure resolv.conf is immutable.
+  file:
+    path: /etc/resolv.conf
+    attr: +i
+  register: resolv_file
+  changed_when: "'i' not in resolv_file.diff.before.attributes"
+  tags:
+    - wsl-dns
