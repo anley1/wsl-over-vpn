@@ -1,0 +1,14 @@
+**/.retry
+*.retry
+*.py[cod]
+.DS*
+**/.travis.yml
+._*
+test*.yml
+.vault_pass.txt
+keyscan.yml
+ks2.yml
+test.yml
+ansible.cfg.*
+test6.yml
+.vscode/
