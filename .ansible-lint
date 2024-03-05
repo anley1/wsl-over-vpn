@@ -1,0 +1,80 @@
+---
+offline: true
+skip_list: # or 'skip_list' to silence them completely
+  - command-instead-of-module # Using command rather than module.
+  - command-instead-of-shell # Use shell only when shell functionality is required.
+  # - deprecated-bare-vars  # Using bare variables is deprecated.
+  - experimental # all rules tagged as experimental
+  - fqcn # Use FQCN for builtin actions.
+  # - literal-compare  # Don't compare to literal True/False.
+  - no-changed-when # Commands should not change things if nothing needs doing.
+  - no-handler # Tasks that run when changed should likely be handlers.
+  - package-latest # Package installs should not use latest.
+  # - risky-shell-pipe  # Shells that use pipes should set the pipefail option.
+  # - unnamed-task  # All tasks should be named.
+  # - var-spacing  # Variables should have spaces before and after: {{ var_name }}.
+  # - yaml  # Violations reported by yamllint.
+  - role-name
+  - name[casing]
+  - name[template]
+  - yaml[line-length]
+
+# when uncommented, ansible-lint will make changes even when --fix is not given
+# write_list:
+#   - idempotency
+#   - command-instead-of-module
+#   - no-jinja-when
+#   - unskippable
+#   - deprecations
+#   - risky-octal
+#   - risky-file-permissions
+#   - command-shell
+#   - yaml
+#   - no-changed-when
+#   - var-naming
+#   - no-free-form
+#   - literal-compare
+#   - deprecated-module
+#   - schema
+#   - warning
+#   - metadata
+#   - galaxy
+#   - risky-shell-pipe
+#   - risk
+#   - ignore-errors
+#   - meta-runtime
+#   - partial-become
+#   - run-once
+#   - deprecated-bare-vars
+#   - internal-error
+#   - load-failure
+#   - fqcn
+#   - no-relative-paths
+#   - syntax
+#   - avoid-implicit
+#   # - formatting
+#   - syntax-check
+#   - sanity
+#   - core
+#   # - key-order
+#   - unpredictability
+#   - parser-error
+#   - deprecated-local-action
+#   - experimental
+#   - idiom
+#   - inline-env-var
+#   - args
+#   - loop-var-prefix
+#   - meta-video-links
+#   - name
+#   - latest
+#   - command-instead-of-shell
+#   - meta-incorrect
+#   - playbook-extension
+#   - role-name
+#   - no-handler
+#   - no-tabs
+#   - meta-no-tags
+#   - package-latest
+#   - jinja
+#   - complexity
